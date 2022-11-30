@@ -1,7 +1,7 @@
 import { AxiosResponse, Method } from "axios";
-import { _IRequestProps } from "core/interfaces";
+import { _IRequestProps } from "core/interfaces/global.interface";
 
-import { http } from "./setup";
+import { http } from "./setup.service";
 
 // Generic verbs
 

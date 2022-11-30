@@ -4,6 +4,7 @@
     "camelcase",
     "commitlint",
     "languagedetector",
+    "reduxjs",
     "stylelint",
     "TTFB"
   ],

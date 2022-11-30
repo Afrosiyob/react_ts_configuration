@@ -1,8 +1,8 @@
 import axios from "axios";
-import { configs } from "core/configs";
-import { StatusCode } from "core/enums";
+import { configs } from "core/configs/app.config";
+import { StatusCode } from "core/enums/status.enum";
 
-import { log } from "../log";
+import { log } from "../log/log.service";
 
 // const baseUrl = process.env.REACT_APP_API_LOCALE_AUTH_URL;
 
