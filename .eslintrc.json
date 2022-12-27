@@ -24,6 +24,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
+
   "plugins": [
     "react",
     "react-hooks",
@@ -179,7 +180,7 @@
       "error",
       {
         "selector": "interface",
-        "leadingUnderscore": "require",
+        "leadingUnderscore": "allow",
         "prefix": ["I"],
         "format": ["UPPER_CASE", "StrictPascalCase"]
       }

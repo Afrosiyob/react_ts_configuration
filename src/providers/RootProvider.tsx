@@ -1,5 +1,6 @@
 import React, { ReactElement, Suspense } from "react";
 
+import ReactNotificationProvider from "./components/ReactNotificationProvider";
 import ReactQueryProvider from "./components/ReactQueryProvider";
 import ReactReduxProvider from "./components/ReactReduxProvider";
 import ReactRouterProvider from "./components/ReactRouterProvider";
@@ -9,9 +10,11 @@ function RootProvider(): ReactElement {
     // other provider start
     <ReactReduxProvider>
       <ReactQueryProvider>
-        <Suspense fallback={<div> ...loading </div>}>
-          <ReactRouterProvider />
-        </Suspense>
+        <ReactNotificationProvider>
+          <Suspense fallback={<div> ...loading </div>}>
+            <ReactRouterProvider />
+          </Suspense>
+        </ReactNotificationProvider>
       </ReactQueryProvider>
     </ReactReduxProvider>
     // other provider end

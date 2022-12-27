@@ -1,26 +1,21 @@
 import axios from "axios";
-import { configs } from "core/configs/app.config";
-import { StatusCode } from "core/enums/status.enum";
+import { configs } from "core/configs";
+import { StatusCode } from "core/enums";
 
 import { log } from "../log/log.service";
 
 // const baseUrl = process.env.REACT_APP_API_LOCALE_AUTH_URL;
 
-// Set config defaults when creating the instance
 const http = axios.create({
   baseURL: configs.api.base_url,
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  },
 });
 
-// `headers` are custom headers to be sent default
-http.defaults.headers.post["Content-Type"] = "application/json";
+// http.defaults.timeout = 300;
 
-// `timeout` specifies the number of milliseconds before the request times out.
-// If the request takes longer than `timeout`, the request will be aborted.
-
-http.defaults.timeout = 300;
-
-// `withCredentials` indicates whether or not cross-site Access-Control requests
-// should be made using credentials
 http.defaults.withCredentials = false;
 
 // Intercept Request
@@ -39,6 +34,7 @@ http.interceptors.request.use(
     return config;
   },
   function fn(error: any) {
+    // log(error);
     // Do something with request error
     return Promise.reject(error);
   }
@@ -60,8 +56,6 @@ http.interceptors.response.use(
   },
   function fn(error) {
     if (error.response) {
-      // The request was made and the server responded with a status code
-      // that falls out of the range of 2xx
       switch (error.response.status) {
         case StatusCode.BadRequest:
           // Handle BadRequest
@@ -91,12 +85,8 @@ http.interceptors.response.use(
           break;
       }
     } else if (error.request) {
-      // The request was made but no response was received
-      // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-      // http.ClientRequest in node.js
       log(error.request);
     } else {
-      // Something happened in setting up the request that triggered an Error
       log(error.message);
     }
     if (configs.app.appIsDev) log(error.config);

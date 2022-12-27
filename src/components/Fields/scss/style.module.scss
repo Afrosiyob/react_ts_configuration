@@ -1,0 +1,26 @@
+.checkbox {
+  &Wrapper {
+    margin-top: 12px;
+  }
+  &Item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    cursor: pointer;
+
+    &--disabled {
+      cursor: not-allowed !important;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &Label {
+      margin-left: 12px;
+      color: var(--content-primary);
+      font-size: 14px;
+      user-select: none;
+    }
+  }
+}

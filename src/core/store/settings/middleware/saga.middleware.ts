@@ -1,5 +1,5 @@
 import createSagaMiddleware from "@redux-saga/core";
-import { configs } from "core/configs/app.config";
+import { configs } from "core/configs/config";
 
 export const sagaMiddleware = createSagaMiddleware();
 

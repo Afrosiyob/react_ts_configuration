@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { _IReactElement } from "core/interfaces/global.interface";
+import { _IReactElement } from "core/interfaces/interfaces";
 import { store } from "core/store/settings/toolkit";
 import { Provider } from "react-redux";
 

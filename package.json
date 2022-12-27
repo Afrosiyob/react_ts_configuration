@@ -2,7 +2,9 @@
   "name": "react_ts_new_method",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
+    "@ant-design/icons": "^4.8.0",
     "@reduxjs/toolkit": "^1.9.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -11,7 +13,10 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "antd": "^5.0.5",
     "axios": "^1.2.0",
+    "classnames": "^2.3.2",
+    "formik": "^2.2.9",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "react": "^18.2.0",
@@ -23,6 +28,7 @@
     "redux": "^4.2.0",
     "redux-logger": "^3.0.6",
     "redux-saga": "^1.2.1",
+    "sass": "^1.56.2",
     "sort-by": "^1.2.0",
     "typescript": "*",
     "web-vitals": "^2.1.0"
@@ -39,12 +45,24 @@
     "prettier-watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
     "stylelint": "stylelint **/*.{css,scss,sass}",
     "stylelint:fix": "stylelint **/*.{css,scss,sass} --fix",
-    "lint:editorconfig": "editorconfig-checker"
+    "lint:editorconfig": "editorconfig-checker",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -62,7 +80,22 @@
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
     "@commitlint/config-conventional": "^17.3.0",
+    "@storybook/addon-actions": "^6.5.14",
+    "@storybook/addon-essentials": "^6.5.14",
+    "@storybook/addon-interactions": "^6.5.14",
+    "@storybook/addon-links": "^6.5.14",
+    "@storybook/addons": "^6.5.14",
+    "@storybook/builder-webpack5": "^6.5.14",
+    "@storybook/manager-webpack5": "^6.5.14",
+    "@storybook/node-logger": "^6.5.14",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.14",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/theming": "^6.5.14",
+    "@types/lodash": "^4.14.191",
+    "@types/yup": "^0.32.0",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "babel-plugin-named-exports-order": "^0.0.2",
     "editorconfig-checker": "^4.0.2",
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.5.0",
@@ -74,14 +107,19 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-storybook": "^0.6.8",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.0",
     "i18next": "^22.0.6",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.0.1",
+    "lodash": "^4.17.21",
     "prettier": "^2.8.0",
+    "prop-types": "^15.8.1",
     "react-i18next": "^12.0.0",
     "stylelint": "^14.15.0",
-    "stylelint-config-recommended-scss": "^8.0.0"
+    "stylelint-config-recommended-scss": "^8.0.0",
+    "webpack": "^5.75.0",
+    "yup": "^0.32.11"
   }
 }

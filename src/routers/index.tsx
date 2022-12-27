@@ -1,5 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 
+import { ProductContainer } from "pages/product";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -10,7 +12,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "product",
-        element: <div> product </div>,
+        element: <ProductContainer />,
       },
     ],
   },
