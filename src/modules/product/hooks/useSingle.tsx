@@ -10,7 +10,7 @@ interface IProps {
 }
 
 interface IReturnProps {
-  item?: Types.IEntity.IProduct;
+  item: Types.IEntity.IProduct;
   [propName: string]: unknown;
 }
 

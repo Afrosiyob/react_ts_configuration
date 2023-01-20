@@ -11,19 +11,12 @@ import * as Types from "../types";
 
 interface IFormValues extends Types.IForm.ICreate {}
 
-// interface IChildren extends FormikProps<IFormValues> {}
-
 interface IProps extends PropsWithChildren {
-  // values from product entity
   data: Types.IForm.ICreate;
-  // for styles
   className?: string;
-  // for react-query
   onSuccess?: (data: Types.IEntity.IProduct) => void;
   onError?: (error: string) => void;
   onSettled?: () => void;
-  // form body
-  // children?: (props: IChildren) => JSX.Element;
 }
 
 const Create: FC<IProps> = ({
@@ -37,10 +30,10 @@ const Create: FC<IProps> = ({
   const queryClient = useQueryClient();
 
   const mutation = useMutation<
-    Types.IEntity.IProduct,
-    string,
-    IFormValues,
-    unknown
+    Types.IEntity.IProduct /** data  */,
+    string /** error  */,
+    IFormValues /** variables */,
+    unknown /** context */
   >(
     async (formData) => {
       const response = await Api.Create({ values: formData });

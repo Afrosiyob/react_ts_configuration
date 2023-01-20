@@ -2,7 +2,7 @@
 import "./i18n";
 
 import React from "react";
-import RootProvider from "providers/RootProvider";
+import { RootProvider } from "providers";
 import ReactDOM from "react-dom/client";
 
 import reportWebVitals from "./reportWebVitals";

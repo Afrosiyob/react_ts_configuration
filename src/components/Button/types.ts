@@ -9,5 +9,5 @@ export interface IButton {
   href?: string;
   danger?: boolean;
   loading?: boolean;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (event: React.MouseEvent) => void;
 }

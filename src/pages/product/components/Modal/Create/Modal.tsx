@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal as AntModal } from "antd";
 
-import Create from "../../Form/Create/Create";
+import { Forms } from "modules/product";
 
 interface IProps {
   isVisible: boolean;
@@ -23,7 +23,9 @@ const CreateModal: React.FC<IProps> = ({
       onCancel={handleCancel}
       footer={false}
     >
-      <Create handleSuccess={handleOk} />
+      {/* <Create handleSuccess={handleOk} /> */}
+
+      <Forms.Create onSuccess={handleOk} />
     </AntModal>
   );
 };

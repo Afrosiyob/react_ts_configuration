@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal as AntModal } from "antd";
 
-import Update from "../../Form/Update/Update";
+import { Forms } from "modules/product";
 
 interface IProps {
   isVisible: boolean;
@@ -25,7 +25,9 @@ const UpdateModal: React.FC<IProps> = ({
       onCancel={handleCancel}
       footer={false}
     >
-      <Update itemId={itemId} handleSuccess={handleOk} />
+      {/* <Update itemId={itemId} handleSuccess={handleOk} /> */}
+
+      <Forms.Update id={itemId} onSuccess={handleOk} />
     </AntModal>
   );
 };

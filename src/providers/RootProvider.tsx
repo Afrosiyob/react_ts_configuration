@@ -1,22 +1,19 @@
 import React, { ReactElement, Suspense } from "react";
 
-import ReactNotificationProvider from "./components/ReactNotificationProvider";
-import ReactQueryProvider from "./components/ReactQueryProvider";
-import ReactReduxProvider from "./components/ReactReduxProvider";
-import ReactRouterProvider from "./components/ReactRouterProvider";
+import * as Providers from "./components";
 
 function RootProvider(): ReactElement {
   return (
     // other provider start
-    <ReactReduxProvider>
-      <ReactQueryProvider>
-        <ReactNotificationProvider>
+    <Providers.Redux>
+      <Providers.Query>
+        <Providers.Notification>
           <Suspense fallback={<div> ...loading </div>}>
-            <ReactRouterProvider />
+            <Providers.Router />
           </Suspense>
-        </ReactNotificationProvider>
-      </ReactQueryProvider>
-    </ReactReduxProvider>
+        </Providers.Notification>
+      </Providers.Query>
+    </Providers.Redux>
     // other provider end
   );
 }

@@ -8,8 +8,7 @@ interface IProps {
 }
 
 const Header: React.FC<IProps> = ({ showModal }) => {
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>): void => {
-    e.preventDefault();
+  const handleClick = (): void => {
     showModal();
   };
 

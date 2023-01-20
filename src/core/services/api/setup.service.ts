@@ -1,8 +1,9 @@
 import axios from "axios";
 import { configs } from "core/configs";
-import { StatusCode } from "core/enums";
 
 import { log } from "../log/log.service";
+
+import { StatusCode } from "./../../enums/enums";
 
 // const baseUrl = process.env.REACT_APP_API_LOCALE_AUTH_URL;
 

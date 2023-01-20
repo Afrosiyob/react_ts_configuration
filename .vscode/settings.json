@@ -5,9 +5,12 @@
     "camelcase",
     "commitlint",
     "Formik",
+    "hookform",
     "languagedetector",
+    "localforage",
     "reduxjs",
     "stylelint",
+    "testid",
     "TTFB"
   ],
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",

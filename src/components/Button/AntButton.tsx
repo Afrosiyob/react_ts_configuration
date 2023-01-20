@@ -10,7 +10,7 @@ function AntButton({
   ...props
 }: Types.IButton): ReactElement {
   return (
-    <Button {...props} onClick={onClick}>
+    <Button data-testid="ANT_BUTTON_ID" onClick={onClick} {...props}>
       {children}
     </Button>
   );

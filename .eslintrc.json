@@ -127,6 +127,14 @@
         "argsIgnorePattern": "^_"
       }
     ],
+    "@typescript-eslint/no-misused-promises": [
+      2,
+      {
+        "checksVoidReturn": {
+          "attributes": false
+        }
+      }
+    ],
 
     "import/first": "error",
     "import/newline-after-import": "error",
