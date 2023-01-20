@@ -33,7 +33,7 @@ describe("Test for Module hook 'Product'", () => {
   describe("Fetch data with 'useList'", () => {
     // it("when API call success", () => {});
 
-    it("when API call fail", () => {});
+    // it("when API call fail", () => {});
 
     it("should return data", async () => {
       mock.mockImplementation(async () => await Promise.resolve(data));

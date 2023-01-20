@@ -16,19 +16,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "typeRoots": ["node_modules/yup"],
-    "types": ["jest", "mocha"]
+    "typeRoots": ["node_modules/yup"]
   },
-  "include": [
-    "src/**/*",
-    "**/*.spec.ts",
-    "**/*.test.ts",
-    "**/*.spec.tsx",
-    "**/*.test.tsx",
-    "**/*.spec.js",
-    "**/*.test.js",
-    "**/*.spec.jsx",
-    "**/*.test.jsx",
-    "src/providers/.tsx"
-  ]
+  "include": ["src", "src/providers/.tsx"]
 }
