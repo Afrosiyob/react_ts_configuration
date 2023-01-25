@@ -24,8 +24,6 @@ interface IReturnProps {
 const useList = ({ params }: IProps): IReturnProps => {
   const initialData: Types.IQuery.IList = { items: [], meta: Mappers.Meta() };
 
-  // const context = useContext(NotificationContext);
-
   // const paramsWithDefault = {
   //   page: has(params, "page") ? get(params, "page", 1) - 1 : 0,
   //   perPage: get(params, "perPage", 20),

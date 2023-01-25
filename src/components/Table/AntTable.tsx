@@ -16,6 +16,7 @@ const AntTable: React.FC<Types.IProps> = ({
 
   return (
     <Table
+      data-testid="ANT_TABLE_ID"
       className={className}
       columns={columns}
       dataSource={list}

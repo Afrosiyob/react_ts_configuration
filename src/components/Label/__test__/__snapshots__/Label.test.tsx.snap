@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot for component 'AntLabel' should match DOM 1`] = `
+<div
+  className="wrapper wrapper--position-vertical"
+  data-testid="ANT_LABEL_ID"
+>
+  <div
+    className="header"
+  >
+    <div
+      className="headerLeft"
+    >
+      <div
+        className="title"
+      >
+        Label
+      </div>
+    </div>
+  </div>
+  <div
+    className="content"
+  >
+    <div>
+       children 
+    </div>
+  </div>
+</div>
+`;

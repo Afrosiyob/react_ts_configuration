@@ -3,16 +3,18 @@ import useFieldValidation from "hooks/useFieldValidation";
 
 describe("Test for Hook 'useFieldValidation'", () => {
   it("check types of return props", () => {
-    const { result } = renderHook((props) => useFieldValidation(props), {
-      initialProps: {
-        fieldState: {
-          isTouched: true,
-          error: {
-            message: "error message",
-          },
+    const defaultProps = {
+      fieldState: {
+        isTouched: true,
+        error: {
+          message: "error message",
         },
-        submitCount: 0,
       },
+      submitCount: 0,
+    };
+
+    const { result } = renderHook((props) => useFieldValidation(props), {
+      initialProps: defaultProps,
     });
 
     expect(typeof result.current.hasFeedback).toBe("boolean");
@@ -21,16 +23,18 @@ describe("Test for Hook 'useFieldValidation'", () => {
   });
 
   it("check values of return props", () => {
-    const { result } = renderHook((props) => useFieldValidation(props), {
-      initialProps: {
-        fieldState: {
-          isTouched: true,
-          error: {
-            message: "error message",
-          },
+    const defaultProps = {
+      fieldState: {
+        isTouched: true,
+        error: {
+          message: "error message",
         },
-        submitCount: 0,
       },
+      submitCount: 0,
+    };
+
+    const { result } = renderHook((props) => useFieldValidation(props), {
+      initialProps: defaultProps,
     });
 
     expect(result.current.hasFeedback).toBe(true);

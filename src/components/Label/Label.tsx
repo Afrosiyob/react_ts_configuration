@@ -29,6 +29,7 @@ const Label = ({
       classes[`wrapper--position-${position}`],
       error && classes["wrapper--error"]
     )}
+    data-testid="ANT_LABEL_ID"
   >
     <div className={classes.header}>
       <div className={classes.headerLeft}>

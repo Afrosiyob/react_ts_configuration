@@ -56,6 +56,7 @@ const List: React.FC<IProps> = ({
   return (
     <div className={`${styles.wrapper}`}>
       <Table
+        data-testid="ANT_TABLE_ID"
         columns={columns}
         data={list}
         loading={listLoading}

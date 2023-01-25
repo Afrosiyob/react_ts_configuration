@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot for component 'AntTable' should match DOM 1`] = `
+<div
+  className="ant-table-wrapper css-dev-only-do-not-override-1n7nwfa"
+>
+  <div
+    className="ant-spin-nested-loading css-dev-only-do-not-override-1n7nwfa"
+  >
+    <div
+      className="ant-spin-container"
+    >
+      <div
+        className="ant-table ant-table-empty ant-table-scroll-horizontal"
+        data-testid="ANT_TABLE_ID"
+      >
+        <div
+          className="ant-table-container"
+        >
+          <div
+            className="ant-table-content"
+            onScroll={[Function]}
+            style={
+              Object {
+                "overflowX": "auto",
+                "overflowY": "hidden",
+              }
+            }
+          >
+            <table
+              style={
+                Object {
+                  "minWidth": "100%",
+                  "tableLayout": "auto",
+                  "width": "auto",
+                }
+              }
+            >
+              <colgroup />
+              <thead
+                className="ant-table-thead"
+              >
+                <tr>
+                  <th
+                    className="ant-table-cell"
+                    colSpan={null}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    rowSpan={null}
+                    scope="col"
+                    style={Object {}}
+                  >
+                    Name
+                  </th>
+                  <th
+                    className="ant-table-cell"
+                    colSpan={null}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    rowSpan={null}
+                    scope="col"
+                    style={Object {}}
+                  >
+                    Age
+                  </th>
+                  <th
+                    className="ant-table-cell"
+                    colSpan={null}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    rowSpan={null}
+                    scope="col"
+                    style={Object {}}
+                  >
+                    Address
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                className="ant-table-tbody"
+              >
+                <tr
+                  aria-hidden="true"
+                  className="ant-table-measure-row"
+                  style={
+                    Object {
+                      "fontSize": 0,
+                      "height": 0,
+                    }
+                  }
+                >
+                  <td
+                    style={
+                      Object {
+                        "border": 0,
+                        "height": 0,
+                        "padding": 0,
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "overflow": "hidden",
+                        }
+                      }
+                    >
+                       
+                    </div>
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "border": 0,
+                        "height": 0,
+                        "padding": 0,
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "overflow": "hidden",
+                        }
+                      }
+                    >
+                       
+                    </div>
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "border": 0,
+                        "height": 0,
+                        "padding": 0,
+                      }
+                    }
+                  >
+                    <div
+                      style={
+                        Object {
+                          "height": 0,
+                          "overflow": "hidden",
+                        }
+                      }
+                    >
+                       
+                    </div>
+                  </td>
+                </tr>
+                <tr
+                  className="ant-table-placeholder"
+                  style={
+                    Object {
+                      "display": null,
+                    }
+                  }
+                >
+                  <td
+                    className="ant-table-cell"
+                    colSpan={3}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    rowSpan={null}
+                    style={Object {}}
+                  >
+                    <div
+                      className="ant-table-expanded-row-fixed"
+                      style={
+                        Object {
+                          "left": 0,
+                          "overflow": "hidden",
+                          "position": "sticky",
+                          "width": 0,
+                        }
+                      }
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
